@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Mi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--enlaza las fuentes-->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Enlaza el archivo de estilos CSS -->
+  </head>
+  <body>
+    <header>
+      <!-- agregamos la foto de perfil con la clase "foto-perfil" para aplicar estilos específicos a la imagen del perfil -->
+      <img src="img/entreno.jpg" alt="Foto de entreno" class="foto-perfil" />
+      <!-- Agrega la clase "info-perfil" para aplicar estilos específicos al contenedor de información del perfil -->
+      <div class="info-perfil">
+        <h1>Luiggi☺️</h1>
+        <!-- Agrega el nombre del perfil dentro de un encabezado h1 -->
+        <p class="slogan">⚡️Estudiante · Deportista · Apasionado de la vida</p>
+      </div>
+    </header>
+    <main>
+      <!-- SOBRE MI -->
+      <section class="sobre-mi">
+        <h2>¿Quién soy?</h2>
+        <p>
+          ¡Hola! Me llamo <strong>Luiggi</strong> y soy un apasionado del
+          deporte, la musica y los videojueegos. Llevo poco tiempo en el mundo
+          del codigo pero cada dia estoy aprendiendo algo nuevo. Cuando no estoy
+          delante del ordenador, me puedes encontrar en la playa jugando voley o
+          rodando con mis patines escuchando musica.
+        </p>
+      </section>
+      <div class="separador"></div>
+      <!-- Agrega un separador visual entre las secciones -->
+      <!--DIV 1: hobbies principales (con imagenes) flexbox: justify-content + align-items-->
+      <section class="seccion-principales">
+        <h2 class="titulo-hobbies">🏆Mis hobbies principales</h2>
+        <!--esta caja estara encima de mis hobbies-->
+        <div class="hobbies-principales">
+          <!-- Agrega la clase "hobbies-principales" para aplicar estilos específicos al contenedor de los hobbies principales -->
+          <!-- TARJETA 1: VOLEY PLAYA-->
+          <div class="VoleyPlaya">
+            <!-- Agrega la clase "VoleyPlaya" para aplicar estilos específicos a esta tarjeta de hobby -->
+            <div class="imagen-container">
+              <img src="img/lu1.png" alt="Luiggi jugando voley playa" />
+            </div>
+            <div class="hobby-info">
+              <!-- Agrega la clase "hobby-info" para aplicar estilos específicos al contenedor de información del hobby -->
+              <h3>Voley Playa🏐</h3>
+              <!-- Agrega el título del hobby -->
+              <p>Arena. sol y amigos</p>
+              <span class="etiqueta">Deporte</span>
+              <!-- Agrega una etiqueta para categorizar el hobby -->
+            </div>
+          </div>
+          <!--TARJETA 2: FÚTBOL-->
+          <div class="Futbol">
+            <!-- Agrega la clase "Futbol" para aplicar estilos específicos a esta tarjeta de hobby -->
+            <div class="imagen-container">
+              <img src="img/fut.jpeg" alt="Luiggi jugando fútbol" />
+            </div>
+            <div class="hobby-info">
+              <!-- Agrega la clase "hobby-info" para aplicar estilos específicos al contenedor de información del hobby -->
+              <h3>Fútbol⚽️</h3>
+              <!-- Agrega el título del hobby -->
+              <p>Equipo. pasión. ¡El deporte rey!</p>
+              <span class="etiqueta">Deporte</span>
+              <!-- Agrega una etiqueta para categorizar el hobby -->
+            </div>
+          </div>
+          <!--TARJETA 3: PATINES-->
+          <div class="Patines">
+            <!-- Agrega la clase "Patines" para aplicar estilos específicos a esta tarjeta de hobby -->
+            <div class="imagen-container">
+              <!-- Agrega la clase "imagen-container" para aplicar estilos específicos al contenedor de la imagen del hobby -->
+              <img src="img/patines.jpg" alt="Luiggi patinando" />
+            </div>
+            <div class="hobby-info">
+              <!-- Agrega la clase "hobby-info" para aplicar estilos específicos al contenedor de información del hobby -->
+              <h3>Patines🛼</h3>
+              <p>Velocidad y diversión en las calles</p>
+              <span class="etiqueta">Deporte</span>
+              <!-- Agrega una etiqueta para categorizar el hobby -->
+            </div>
+          </div>
+        </div>
+        <!-- Cierra el contenedor de hobbies principales -->
+      </section>
+      <div class="separador"></div>
+      <!-- Agrega un separador visual entre las secciones -->
+      <!--DIV 2: por aqui agregare unos hobbies mas  (sin imagenes) grid: grid-template-columns + gap-->
+      <section class="seccion-otros-hobbies">
+        <h2 class="titulo-hobbies">Otros Hobbies</h2>
+        <!--esta caja de titulo estara encima de mis otros hobbies-->
+        <!--contenedor flex con flex-wrap:si no hay espacio, bajan solos-->
+
+        <div class="otros-hobbies">
+          <!--TARJETA 1: VIDEOJUEGOS hobbie extra-->
+          <div class="videojuegos">
+            <div class="emoji">🎮</div>
+            <h3>Videojuegos</h3>
+            <p>apasionado del shooter y las aventuras</p>
+            <span class="etiqueta">Entretenimiento</span>
+          </div>
+
+          <!--TARJETA 2: MÚSICA hobbie extra 2-->
+          <div class="musica">
+            <div class="emoji">🎵</div>
+            <h3>Música</h3>
+            <p>Ritmos que inspiran y acompañan mi día a día</p>
+            <span class="etiqueta">Arte</span>
+          </div>
+        </div>
+        <!-- Cierra el contenedor de otros hobbies -->
+      </section>
+    </main>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>
+        © 2024 Luiggi. Todos los derechos reservados. · Mi tercera pagina web 🫶🏻
+      </p>
+    </footer>
+  </body>
+</html>

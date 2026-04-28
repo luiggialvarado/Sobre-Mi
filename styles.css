@@ -1,0 +1,248 @@
+/* empezmos con el reset de css - con esto quitamos los márgenes y padding por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ahora vamos a darle un fondo a nuestro body y una fuente */
+/*probaremos a usar un root a ver si nos funciona 🤞🏻*/
+:root {
+  --fuente-principal: "Nunito", sans-serif;
+  --naranja: #ff6b35;
+  --amarillo: #ffd23f;
+  --azul: #1b4fd8;
+  --oscuro: #0d0d0d;
+  --claro: #f5f5f0;
+  --gris: #555;
+  --fuente-secundaria: "Bebas Neue", sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--claro);
+  color: var(--oscuro);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-secundaria);
+  letter-spacing: 2px; /* esto agrega un espacio entre las letras de los títulos */
+}
+/*Header: usaremos flexbox para poner la foto y el texto uno al lado del otro*/
+header {
+  background-color: var(--oscuro);
+  color: white;
+  padding: 40px; /* esto agrega un poco de espacio dentro del header */
+  display: flex; /* esto nos permite usar flexbox en el header */
+  align-items: center; /* esto alinea verticalmente los elementos dentro del header */
+  gap: 30px; /* esto agrega un espacio entre la imagen y el texto */
+}
+/* ahora vamos a darle estilo a la imagen del header */
+header img {
+  width: 250px; /* esto hace que la imagen tenga un ancho de 250px */
+  height: 250px; /* esto hace que la imagen tenga una altura de 250px */
+  border-radius: 10%; /* esto hace que la imagen sea redonda */
+  border: 5px solid var(--naranja); /* esto agrega un borde naranja alrededor de la imagen */
+  flex-shrink: 1; /* esto evita que la imagen se reduzca de tamaño si el espacio es limitado */
+}
+.info-perfil h1 {
+  font-size: 3.5rem; /* esto hace que el título sea grande */
+  color: var(--amarillo); /* esto hace que el texto sea de color amarillo */
+  line-height: 1; /* esto ajusta el espacio entre las líneas del título */
+}
+.info-perfil .slogan {
+  color: var(--naranja); /* esto hace que el slogan sea de color naranja */
+  font-size: 1rem; /* esto hace que el slogan sea un poco más pequeño que el título */
+  margin-top: 10px; /* esto agrega un espacio entre el título y el slogan */
+  font-weight: 600; /* esto hace que el slogan sea un poco más grueso */
+}
+/* ahora vamos a darle estilo a la sección de hobbies principales */
+.separador {
+  height: 15px; /* esto hace que el separador sea una línea horizontal de 15px de alto */
+  background: linear-gradient(
+    to right,
+    var(--naranja),
+    var(--amarillo),
+    var(--azul)
+  ); /* esto hace que el separador tenga un degradado de colores */
+  margin: 40px 0; /* esto agrega un espacio arriba y abajo del separador */
+}
+/* ahora le daremos un poco de vida a la seccion "sobre mi"*/
+.sobre-mi {
+  max-width: 800px; /* esto hace que el contenido de la sección no sea demasiado ancho */
+  margin: 50px auto; /* esto centra la sección horizontalmente */
+  padding: 0 30px; /* esto agrega un poco de espacio a los lados de la sección */
+  text-align: center; /* esto centra el texto dentro de la sección */
+}
+/* ahora vamos a darle estilo al titulo de la sección "sobre mi" */
+.sobre-mi h2 {
+  font-size: 2.5rem; /* esto hace que el título de la sección sea grande */
+  color: var(--azul); /* esto hace que el título sea de color azul */
+  margin-bottom: 20px; /* esto agrega un espacio debajo del título */
+}
+/* ahora vamos a darle estilo al texto de la sección "sobre mi" */
+.sobre-mi p {
+  font-size: 1.05rem; /* esto hace que el texto sea un poco más grande que el texto normal */
+  line-height: 1.8; /* esto ajusta el espacio entre las líneas del texto */
+  color: var(--gris); /* esto hace que el texto sea de color gris */
+}
+/* ahora vamos a darle estilo al titulo de la sección */
+.titulo-hobbies {
+  font-size: 2rem; /* esto hace que el título de la sección sea grande */
+  color: var(--naranja); /* esto hace que el título sea de color naranja */
+  margin-bottom: 30px; /* esto agrega un espacio debajo del título */
+  text-align: center; /* esto centra el título dentro de la sección */
+}
+/* ahora vamos a darle estilo a las tarjetas de hobbies principales */
+.seccion-principales {
+  padding: 20px 40px 50px; /* esto agrega un poco de espacio dentro de la sección */
+  background-color: white; /* esto hace que el fondo de la sección sea blanco */
+}
+/* contenedor flex para las 3 tarjetas de hobbies principales */
+.hobbies-principales {
+  display: flex; /* esto nos permite usar flexbox para organizar las tarjetas */
+  justify-content: center; /* esto centra las tarjetas horizontalmente */
+  align-items: flex-start; /* esto alinea verticalmente las tarjetas */
+  gap: 30px; /* esto agrega un espacio entre las tarjetas */
+  flex-wrap: wrap; /* esto permite que las tarjetas se ajusten a la pantalla si no hay suficiente espacio */
+}
+.VoleyPlaya:hover {
+  transform: translateY(-8px);
+  border-color: var(--naranja);
+}
+.Futbol:hover {
+  transform: translateY(-8px);
+  border-color: var(--naranja);
+}
+.Patines:hover {
+  transform: translateY(-8px);
+  border-color: var(--naranja);
+}
+/* estilo para cada tarjeta de hobby principal */
+.VoleyPlaya,
+.Futbol,
+.Patines {
+  width: 270px; /* esto hace que cada tarjeta tenga un ancho fijo */
+  border-radius: 16px; /* esto hace que las tarjetas tengan bordes redondeados */
+  overflow: hidden; /* esto asegura que el contenido de la tarjeta no se salga de los bordes redondeados */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* esto agrega una sombra suave alrededor de las tarjetas */
+  background: white; /* esto hace que el fondo de las tarjetas sea blanco */
+  border: 3px solid #eee; /* esto agrega un borde gris claro alrededor de las tarjetas */
+}
+
+.imagen-container {
+  width: 100%; /* esto hace que el contenedor de la imagen ocupe todo el ancho de la tarjeta */
+  height: 200px; /* esto hace que el contenedor de la imagen tenga una altura fija */
+  overflow: hidden; /* esto asegura que la imagen no se salga del contenedor */
+  background-color: #ccc; /* esto agrega un fondo gris claro al contenedor de la imagen mientras se carga la imagen */
+}
+/* estilo para la imagen dentro del contenedor de la tarjeta de hobby */
+.imagen-container img {
+  width: 100%; /* esto hace que la imagen ocupe todo el ancho del contenedor */
+  height: 100%; /* esto hace que la imagen ocupe toda la altura del contenedor */
+  object-fit: cover; /* esto hace que la imagen se recorte para llenar el contenedor sin distorsionarse */
+}
+/* estilo para la información del hobby dentro de cada tarjeta */
+.hobby-info {
+  padding: 18px; /* esto agrega un poco de espacio dentro del contenedor de información del hobby */
+}
+/* estilo para el título del hobby dentro de cada tarjeta */
+.hobby-info h3 {
+  font-size: 1.5rem; /* esto hace que el título del hobby sea grande */
+  color: var(
+    --oscuro
+  ); /* esto hace que el título del hobby sea de color oscuro */
+  margin-bottom: 10px; /* esto agrega un espacio debajo del título del hobby */
+}
+/* estilo para la descripción del hobby dentro de cada tarjeta */
+.hobby-info p {
+  font-size: 1rem; /* esto hace que la descripción del hobby sea un poco más grande que el texto normal */
+  color: var(
+    --gris
+  ); /* esto hace que la descripción del hobby sea de color gris */
+  line-height: 1.5; /* esto ajusta el espacio entre las líneas de la descripción del hobby */
+}
+/* estilo para la etiqueta de categoría del hobby dentro de cada tarjeta */
+.etiqueta {
+  display: inline-block; /* esto hace que la etiqueta se comporte como un bloque en línea */
+  margin-top: 12px; /* esto agrega un espacio arriba de la etiqueta */
+  padding: 10px 12px; /* esto agrega un poco de espacio dentro de la etiqueta */
+  background-color: var(
+    --naranja
+  ); /* esto hace que el fondo de la etiqueta sea naranja */
+  color: white; /* esto hace que el texto de la etiqueta sea blanco */
+  border-radius: 20px; /* esto hace que la etiqueta tenga bordes redondeados */
+  font-size: 0.85rem; /* esto hace que el texto de la etiqueta sea un poco más pequeño que el texto normal */
+  font-weight: 700; /* esto hace que el texto de la etiqueta sea un poco más grueso */
+  text-transform: uppercase; /* esto hace que el texto de la etiqueta esté en mayúsculas */
+  overflow: hidden; /* esto asegura que el texto de la etiqueta no se salga de los bordes redondeados */
+}
+/* ahora vamos a darle estilo a la sección de hobbies secundarios */
+.seccion-otros-hobbies {
+  padding: 20px 40px 50px; /* esto agrega un poco de espacio dentro de la sección */
+  background-color: var(
+    --claro
+  ); /* esto hace que el fondo de la sección sea claro */
+}
+.seccion-otros-hobbies .titulo-hobbies {
+  color: var(
+    --azul
+  ); /* esto hace que el título de la sección sea de color azul */
+}
+/* contenedor flex para los hobbies secundarios  videojuegos y música */
+.otros-hobbies {
+  display: flex; /* esto nos permite usar flexbox para organizar los hobbies secundarios */
+  justify-content: center; /* esto centra los hobbies secundarios horizontalmente */
+  align-items: center; /* esto alinea verticalmente los hobbies secundarios */
+  gap: 20px; /* esto agrega un espacio entre los hobbies secundarios */
+  flex-wrap: wrap; /* esto permite que los hobbies secundarios se ajusten a la pantalla si no hay suficiente espacio */
+}
+/* estilo para cada hobby secundario - flexbox: flex-wrap + justify-content */
+.videojuegos,
+.musica {
+  background: white; /* esto hace que el fondo de cada hobby secundario sea blanco */
+  border-radius: 16px; /* esto hace que cada hobby secundario tenga bordes redondeados */
+  padding: 25px 20px; /* esto agrega un poco de espacio dentro de cada hobby secundario */
+  width: 170px; /* esto hace que cada hobby secundario tenga un ancho fijo */
+  text-align: center; /* esto centra el texto dentro de cada hobby secundario */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* esto agrega una sombra suave alrededor de cada hobby secundario */
+  border-bottom: 4px solid var(--azul); /* esto agrega un borde azul en la parte inferior de cada hobby secundario */
+}
+.videojuegos .emoji,
+.musica .emoji {
+  font-size: 2.5rem; /* esto hace que el emoji sea grande */
+  margin-bottom: 15px; /* esto agrega un espacio debajo del emoji */
+}
+.videojuegos h3,
+.musica h3 {
+  font-size: 1.2rem; /* esto hace que el título del hobby secundario sea un poco más grande que el texto normal */
+  color: var(
+    --oscuro
+  ); /* esto hace que el título del hobby secundario sea de color oscuro */
+  margin-bottom: 10px; /* esto agrega un espacio debajo del título del hobby secundario */
+}
+.videojuegos p,
+.musica p {
+  font-size: 0.95rem; /* esto hace que la descripción del hobby secundario sea un poco más grande que el texto normal */
+  color: var(
+    --gris
+  ); /* esto hace que la descripción del hobby secundario sea de color gris */
+}
+.videojuegos:hover,
+.musica:hover {
+  transform: translateY(-6px);
+  border-bottom-color: var(
+    --naranja
+  ); /* esto cambia el color del borde inferior a naranja al hacer hover */
+}
+/* ahora vamos a darle estilo al footer */
+footer {
+  background-color: var(
+    --oscuro
+  ); /* esto hace que el fondo del footer sea oscuro*/
+  color: var(--gris);
+  text-align: center; /* esto centra el texto dentro del footer */
+  padding: 20px; /* esto agrega un poco de espacio dentro del footer */
+  font-size: 0.9rem; /* esto hace que el texto del footer sea un poco más pequeño que el texto normal */
+  border-top: 4px solid var(--naranja); /* esto agrega un borde naranja en la parte superior del footer */
+}
