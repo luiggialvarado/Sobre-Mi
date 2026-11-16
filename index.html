@@ -3,127 +3,207 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Mi</title>
+    <title>Sobre mí | Luiggi</title>
+    <meta
+      name="description"
+      content="Soy Luiggi, desarrollador web Full Stack y jugador de vóley playa."
+    />
+    <!-- Favicon dibujado en SVG: una L amarilla sobre negro -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap"
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d0d0d'/%3E%3Cpath d='M10 7h4v14h8v4H10z' fill='%23ffd23f'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!--enlaza las fuentes-->
     <link rel="stylesheet" href="styles.css" />
-    <!-- Enlaza el archivo de estilos CSS -->
   </head>
   <body>
-    <header>
-      <!-- agregamos la foto de perfil con la clase "foto-perfil" para aplicar estilos específicos a la imagen del perfil -->
-      <img src="img/entreno.jpg" alt="Foto de entreno" class="foto-perfil" />
-      <!-- Agrega la clase "info-perfil" para aplicar estilos específicos al contenedor de información del perfil -->
-      <div class="info-perfil">
-        <h1>Luiggi☺️</h1>
-        <!-- Agrega el nombre del perfil dentro de un encabezado h1 -->
-        <p class="slogan">⚡️Estudiante · Deportista · Apasionado de la vida</p>
+    <!-- Primer elemento al pulsar Tab: permite saltarse el menú -->
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+      <nav class="menu contenedor" aria-label="Principal">
+        <a class="logo" href="#">Luiggi</a>
+        <ul class="menu-enlaces">
+          <li><a href="#quien-soy">Quién soy</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero contenedor">
+        <img
+          class="foto-perfil"
+          src="img/web/lu2.jpg"
+          width="564"
+          height="622"
+          alt="Luiggi en una pista de vóley playa, con gafas de sol, preparado para sacar"
+        />
+        <div>
+          <h1>Luiggi</h1>
+          <p class="lema">
+            Desarrollador web Full Stack. Juego al vóley playa siempre que puedo.
+          </p>
+          <a class="boton" href="#contacto">Escríbeme</a>
+        </div>
       </div>
     </header>
-    <main>
-      <!-- SOBRE MI -->
-      <section class="sobre-mi">
-        <h2>¿Quién soy?</h2>
-        <p>
-          ¡Hola! Me llamo <strong>Luiggi</strong> y soy un apasionado del
-          deporte, la musica y los videojueegos. Llevo poco tiempo en el mundo
-          del codigo pero cada dia estoy aprendiendo algo nuevo. Cuando no estoy
-          delante del ordenador, me puedes encontrar en la playa jugando voley o
-          rodando con mis patines escuchando musica.
-        </p>
+
+    <main id="contenido">
+      <section id="quien-soy" class="seccion sobre-mi">
+        <div class="contenedor">
+          <h2>¿Quién soy?</h2>
+          <p>
+            Me llamo <strong>Luiggi</strong> y me apasionan el deporte, la
+            música y los videojuegos. Acabo de terminar el bootcamp de
+            desarrollo web Full Stack de Ironhack y sigo aprendiendo algo nuevo
+            cada día. Cuando no estoy delante del
+            ordenador, me puedes encontrar en la playa jugando al vóley o
+            patinando con música.
+          </p>
+        </div>
       </section>
-      <div class="separador"></div>
-      <!-- Agrega un separador visual entre las secciones -->
-      <!--DIV 1: hobbies principales (con imagenes) flexbox: justify-content + align-items-->
-      <section class="seccion-principales">
-        <h2 class="titulo-hobbies">🏆Mis hobbies principales</h2>
-        <!--esta caja estara encima de mis hobbies-->
-        <div class="hobbies-principales">
-          <!-- Agrega la clase "hobbies-principales" para aplicar estilos específicos al contenedor de los hobbies principales -->
-          <!-- TARJETA 1: VOLEY PLAYA-->
-          <div class="VoleyPlaya">
-            <!-- Agrega la clase "VoleyPlaya" para aplicar estilos específicos a esta tarjeta de hobby -->
-            <div class="imagen-container">
-              <img src="img/lu1.png" alt="Luiggi jugando voley playa" />
-            </div>
-            <div class="hobby-info">
-              <!-- Agrega la clase "hobby-info" para aplicar estilos específicos al contenedor de información del hobby -->
-              <h3>Voley Playa🏐</h3>
-              <!-- Agrega el título del hobby -->
-              <p>Arena. sol y amigos</p>
-              <span class="etiqueta">Deporte</span>
-              <!-- Agrega una etiqueta para categorizar el hobby -->
-            </div>
+
+      <section id="hobbies" class="seccion hobbies">
+        <div class="contenedor">
+          <h2>Mis hobbies</h2>
+
+          <div class="rejilla-hobbies">
+            <article class="tarjeta-hobby">
+              <img
+                src="img/web/lu1.jpg"
+                width="777"
+                height="900"
+                loading="lazy"
+                alt="Luiggi saltando a bloquear en la red de vóley playa"
+              />
+              <div class="tarjeta-texto">
+                <h3>Vóley playa</h3>
+                <p>Arena, sol y amigos.</p>
+                <p class="categoria">Deporte</p>
+              </div>
+            </article>
+
+            <article class="tarjeta-hobby">
+              <img
+                src="img/web/fut.jpg"
+                width="500"
+                height="900"
+                loading="lazy"
+                alt="Botas de fútbol azules sobre césped artificial"
+              />
+              <div class="tarjeta-texto">
+                <h3>Fútbol</h3>
+                <p>Equipo y pasión. El deporte rey.</p>
+                <p class="categoria">Deporte</p>
+              </div>
+            </article>
+
+            <article class="tarjeta-hobby">
+              <img
+                src="img/web/patines.jpg"
+                width="625"
+                height="900"
+                loading="lazy"
+                alt="Patines en línea negros sobre un suelo de baldosas"
+              />
+              <div class="tarjeta-texto">
+                <h3>Patines</h3>
+                <p>Velocidad y diversión por la calle.</p>
+                <p class="categoria">Deporte</p>
+              </div>
+            </article>
           </div>
-          <!--TARJETA 2: FÚTBOL-->
-          <div class="Futbol">
-            <!-- Agrega la clase "Futbol" para aplicar estilos específicos a esta tarjeta de hobby -->
-            <div class="imagen-container">
-              <img src="img/fut.jpeg" alt="Luiggi jugando fútbol" />
+
+          <ul class="otros-hobbies">
+            <li class="otro-hobby">
+              <!-- Icono de mando (decorativo, el lector de pantalla lo ignora) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="11" rx="4" />
+                <path d="M7 11v3M5.5 12.5h3M15 12h.01M18 13h.01" />
+              </svg>
+              <div>
+                <h3>Play</h3>
+                <p>Shooters y juegos de aventura.</p>
+              </div>
+            </li>
+            <li class="otro-hobby">
+              <!-- Icono de nota musical -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+              </svg>
+              <div>
+                <h3>Música</h3>
+                <p>Me acompaña todo el día.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="tecnologias" class="seccion">
+        <div class="contenedor">
+          <h2>Tecnologías</h2>
+          <p class="intro-tecnologias">Lo que aprendí y practiqué en el bootcamp de Ironhack.</p>
+
+          <div class="grupos-tecnologias">
+            <div class="grupo">
+              <h3>Frontend</h3>
+              <ul class="tecnologias">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
             </div>
-            <div class="hobby-info">
-              <!-- Agrega la clase "hobby-info" para aplicar estilos específicos al contenedor de información del hobby -->
-              <h3>Fútbol⚽️</h3>
-              <!-- Agrega el título del hobby -->
-              <p>Equipo. pasión. ¡El deporte rey!</p>
-              <span class="etiqueta">Deporte</span>
-              <!-- Agrega una etiqueta para categorizar el hobby -->
+            <div class="grupo">
+              <h3>Backend</h3>
+              <ul class="tecnologias">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Node.js y npm</li>
+                <li>APIs REST</li>
+              </ul>
             </div>
-          </div>
-          <!--TARJETA 3: PATINES-->
-          <div class="Patines">
-            <!-- Agrega la clase "Patines" para aplicar estilos específicos a esta tarjeta de hobby -->
-            <div class="imagen-container">
-              <!-- Agrega la clase "imagen-container" para aplicar estilos específicos al contenedor de la imagen del hobby -->
-              <img src="img/patines.jpg" alt="Luiggi patinando" />
+            <div class="grupo">
+              <h3>Bases de datos</h3>
+              <ul class="tecnologias">
+                <li>SQL</li>
+                <li>MySQL</li>
+              </ul>
             </div>
-            <div class="hobby-info">
-              <!-- Agrega la clase "hobby-info" para aplicar estilos específicos al contenedor de información del hobby -->
-              <h3>Patines🛼</h3>
-              <p>Velocidad y diversión en las calles</p>
-              <span class="etiqueta">Deporte</span>
-              <!-- Agrega una etiqueta para categorizar el hobby -->
+            <div class="grupo">
+              <h3>Herramientas</h3>
+              <ul class="tecnologias">
+                <li>Git y GitHub</li>
+                <li>Bash</li>
+                <li>Jest</li>
+              </ul>
             </div>
           </div>
         </div>
-        <!-- Cierra el contenedor de hobbies principales -->
-      </section>
-      <div class="separador"></div>
-      <!-- Agrega un separador visual entre las secciones -->
-      <!--DIV 2: por aqui agregare unos hobbies mas  (sin imagenes) grid: grid-template-columns + gap-->
-      <section class="seccion-otros-hobbies">
-        <h2 class="titulo-hobbies">Otros Hobbies</h2>
-        <!--esta caja de titulo estara encima de mis otros hobbies-->
-        <!--contenedor flex con flex-wrap:si no hay espacio, bajan solos-->
-
-        <div class="otros-hobbies">
-          <!--TARJETA 1: VIDEOJUEGOS hobbie extra-->
-          <div class="videojuegos">
-            <div class="emoji">🎮</div>
-            <h3>Videojuegos</h3>
-            <p>apasionado del shooter y las aventuras</p>
-            <span class="etiqueta">Entretenimiento</span>
-          </div>
-
-          <!--TARJETA 2: MÚSICA hobbie extra 2-->
-          <div class="musica">
-            <div class="emoji">🎵</div>
-            <h3>Música</h3>
-            <p>Ritmos que inspiran y acompañan mi día a día</p>
-            <span class="etiqueta">Arte</span>
-          </div>
-        </div>
-        <!-- Cierra el contenedor de otros hobbies -->
       </section>
     </main>
-    <!-- PIE DE PÁGINA -->
-    <footer>
-      <p>
-        © 2024 Luiggi. Todos los derechos reservados. · Mi tercera pagina web 🫶🏻
-      </p>
+
+    <footer id="contacto" class="pie">
+      <div class="contenedor">
+        <h2>¿Hablamos?</h2>
+        <p class="pie-texto">
+          Si quieres hablar de código, de deporte o proponerme algo, me
+          encuentras aquí:
+        </p>
+        <ul class="redes">
+          <li><a href="https://github.com/luiggialvarado">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/luiggialvarado">LinkedIn</a></li>
+        </ul>
+        <p class="copy">© 2026 Luiggi. Hecha a mano con HTML y CSS.</p>
+      </div>
     </footer>
   </body>
 </html>
